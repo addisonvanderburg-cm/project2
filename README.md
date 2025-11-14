@@ -1,6 +1,3 @@
-CSE Project 2
-- Teacher GET HUB : Fletch03
-
 Role: 
 - Subscription bot
     - Takes the subscriptions of all of the services
