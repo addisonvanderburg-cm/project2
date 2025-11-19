@@ -31,7 +31,7 @@ def get_health_score(total_cost):
     if total_cost < 40:
         return "Excellent spending control!", "#2ECC71"
     elif total_cost < 80:
-        return "Fair, but review spending.", "#F1C40F"
+        return "Fair, but review spending." , "#F1C40F"
     else:
         return "High spending! Consider reviewing subscriptions.", "#E74C3C"
 
@@ -202,7 +202,7 @@ def create_welcome_page(parent):
                     highlightthickness=1)
     card.pack(expand=True, pady=100)
 
-    tk.Label(card, text="BudgetBuddy",
+    tk.Label(card, text="Financial Manager",
              font=("Arial", 36, "bold"),
              fg=text, bg=card_bg).pack(pady=(0, 10))
 
@@ -212,9 +212,9 @@ def create_welcome_page(parent):
 
     tk.Button(
         card, text="Get Started", command=show_manager,
-        bg=blue, fg="white", font=("Arial", 16, "bold"),
+        bg="white", fg="black", font=("Arial", 16, "bold"),
         padx=40, pady=12, relief=tk.FLAT, bd=0,
-        activebackground="#1F6CD6"
+        activebackground="#DDDDDD" 
     ).pack()
 
     return frame
@@ -233,7 +233,7 @@ def create_manager_page(parent):
 
     frame = tk.Frame(parent, bg=bg_main, padx=20, pady=20)
 
-    tk.Label(frame, text="Financial Manager",
+    tk.Label(frame, text="Financial Buddy",
              font=("Arial", 30, "bold"),
              fg=text, bg=bg_main).pack(anchor="w", pady=(0, 15))
 
@@ -275,7 +275,7 @@ def create_manager_page(parent):
 
     tk.Button(top, text="Add Subscription",
               command=add_subscription,
-              bg=blue, fg="white",
+              bg=blue, fg="#333333", 
               font=("Arial", 13, "bold"),
               pady=8, relief=tk.FLAT, bd=0
              ).pack(pady=(10, 0))
@@ -305,7 +305,7 @@ def create_manager_page(parent):
 
     tk.Button(
         btn_row, text="Delete Selected", command=delete_subscription,
-        bg="#D73833", fg="white",
+        bg="#D73833", fg="#000000", 
         font=("Arial", 12, "bold"),
         pady=6, relief=tk.FLAT, bd=0
     ).pack(side=tk.LEFT, expand=True, padx=6)
@@ -356,7 +356,7 @@ def start_app():
     global root, welcome_frame, manager_frame
 
     root = tk.Tk()
-    root.title("BudgetBuddy - Dark Mode")
+    root.title("Financial Buddy- Dark Mode")
     root.geometry("950x950")
     root.configure(bg="#0D1117")
 
